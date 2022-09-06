@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +18,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified'
+])->group(function () {
+    Route::post('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});
+
+//Loan Activity Routes
+Route::post('/LoanRegistration',[LoanController::class, 'savetoLoan']) ->name('savetoLoan');
+Route::get('/LoanSeach',[LoanController::class, 'SearchLoans']);
