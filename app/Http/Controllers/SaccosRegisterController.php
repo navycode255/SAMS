@@ -15,7 +15,7 @@ class SaccosRegisterController extends Controller
 
     public function getSaccos(Request $request)
     {
-        $allSaccosNames = Saccos::all();
+        $allSaccosNames = Saccos::all(); //Pull all data from saccos table
 
         $newSaccos = $request -> new_saccos;
 
@@ -28,7 +28,6 @@ class SaccosRegisterController extends Controller
         foreach($allSaccosNames as $name)
         {
 
-            echo $name->saccos_name;
             if ($name->saccos_name == $newSaccos) {
                 $available = true;  
                 break;       

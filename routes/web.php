@@ -1,11 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-<<<<<<< HEAD
+
 use App\Http\Controllers\LoanController;
-=======
+
 use App\Http\Controllers\SaccosRegisterController;
->>>>>>> 1c42236db13b9c4e9f3eeace64c83dbdf8d1a2b4
+
 
 /*
 |--------------------------------------------------------------------------
@@ -26,7 +26,7 @@ Route::get('landing-page', function() {
     return view('landing-page');
 });
 
-<<<<<<< HEAD
+
 
 Route::middleware([
     'auth:sanctum',
@@ -41,10 +41,10 @@ Route::middleware([
 //Loan Activity Routes
 Route::post('/LoanRegistration',[LoanController::class, 'savetoLoan']) ->name('savetoLoan');
 Route::get('/LoanSeach',[LoanController::class, 'SearchLoans']);
-=======
+
 Route::post('forms',[SaccosRegisterController:: class ,'getSaccos']);
 
 // Route::post('create-request',['SaccosRegisterController@getSaccos'])->name('create');
 
 // Route::post('lading-page', [SaccosRegisterController::class, 'getSaccos'])->name('create');
->>>>>>> 1c42236db13b9c4e9f3eeace64c83dbdf8d1a2b4
+
