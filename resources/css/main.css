@@ -3,6 +3,11 @@
     ===== Google Font Import - Poppins ===== 
 */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 *{
     margin: 0;
     padding: 0;
@@ -10,11 +15,11 @@
     font-family: 'Poppins', sans-serif;
 }
 body{
+    background-image: "url(./resources/assets/img/main-bg.jpeg)";
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #4070f4;
 }
 .container {
     position: relative;
@@ -148,6 +153,9 @@ form .buttons button {
     bottom: 2rem;
     margin-right: 14px;
 }
+
+/* ************ Tailwind CSS ************ */
+
 @media (max-width: 750px) {
     .container form{
         overflow-y: scroll;

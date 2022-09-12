@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoanController;
 
 use App\Http\Controllers\SaccosRegisterController;
-
+use App\Models\Saccos;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,14 +18,9 @@ use App\Http\Controllers\SaccosRegisterController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('landing-page');
-// });
-
-Route::get('landing-page', function() {
-    return view('landing-page');
+Route::get('/', function () {
+    return view('welcome');
 });
-
 
 
 Route::middleware([
@@ -37,6 +32,11 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+// ************* Registration Process *************
+
+Route::post('registration', [SaccosRegisterController::class, 'getSaccos'])->name('register');
+
 
 //Loan Activity Routes
 Route::post('/LoanRegistration',[LoanController::class, 'savetoLoan']) ->name('savetoLoan');

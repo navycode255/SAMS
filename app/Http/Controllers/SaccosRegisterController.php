@@ -38,7 +38,7 @@ class SaccosRegisterController extends Controller
             return view('forms.register.create_saccos');
         }
         else{
-           return redirect('landing-page');
+           return redirect('/');
         }
     } 
     

@@ -1,5 +1,7 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
+const colors = require('tailwindcss/colors');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     content: [
@@ -10,6 +12,47 @@ module.exports = {
     ],
 
     theme: {
+        screens: {
+            sm: '480px',
+            md: '760px',
+            lg: '976px',
+            xl: '1440px',
+        },
+        colors:{
+            transparent: 'transparent',
+            current: 'currentColor',
+            amber: colors.amber,
+            black: colors.black,
+            blue: colors.blue,
+            cyan: colors.cyan,
+            emerald: colors.emerald,
+            fuchsia: colors.fuchsia,
+            gray: colors.gray,
+            blueGray: colors.blueGray,
+            coolGray: colors.coolGray,
+            trueGray: colors.trueGray,
+            warmGray: colors.warmGray,
+            green: colors.green,
+            indigo: colors.indigo,
+            lime: colors.lime,
+            orange: colors.orange,
+            pink: colors.pink,
+            purple: colors.purple,
+            red: colors.red,
+            rose: colors.rose,
+            sky: colors.sky,//warn - As of Tailwind CSS v2.2, `lightBlue` has been renamed to `sky`.
+            teal: colors.teal,
+            violet: colors.violet,
+            yellow: colors.amber,
+            white: colors.white,
+            'royal-hyacinth': '#47466D',
+            'cendre-blue': '#3D84A7',
+            'medium-turquoise': '#46CDCF',
+            waterwings:'#ABEDD8',
+        },
+        backgroundImage: {
+            'main-pattern': "url(./resources/assets/img/main-bg.jpeg)",
+        },
         extend: {
             fontFamily: {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
